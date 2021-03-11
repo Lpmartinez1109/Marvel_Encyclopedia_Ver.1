@@ -1,0 +1,27 @@
+{
+  "name": "Marvel_Encyclopedia_Ver.1",
+  "version": "1.0.0",
+  "description": "This is a beginning project into creating an online encyclopedia feature characters from Marvel Comics. This initial project will feature background information on some of Marvel Comics' famous or sometimes infamous characters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lpmartinez1109/Marvel_Encyclopedia_Ver.1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lpmartinez1109/Marvel_Encyclopedia_Ver.1/issues"
+  },
+  "homepage": "https://github.com/Lpmartinez1109/Marvel_Encyclopedia_Ver.1#readme",
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "console.table": "^0.10.0",
+    "i": "^0.3.6",
+    "inquirer": "^8.0.0",
+    "mysql": "^2.18.1"
+  }
+}
