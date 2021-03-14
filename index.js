@@ -121,6 +121,20 @@ const { removeTeam } = require("./db");
      loadMainPrompts();
  }
 
+ async function addTeam(){
+     const team = await prompt([
+        { 
+            name: "name",
+            message: "What is the name of the team?"
+        }
+     ]);
+
+     await db.createTeam(team);
+     console.log(`Added ${team.name} to the database`);
+     loadMainPrompts();
+
+ }
+
  function quit(){
      console.log("Goodbye for now!");
      process.exit();
