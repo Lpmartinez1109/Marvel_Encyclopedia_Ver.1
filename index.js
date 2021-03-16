@@ -1,8 +1,6 @@
  const {prompt} = require("inquirer");
  const logo = require("asciiart-logo");
  const db = require("./db");
-const { inherits } = require("util");
-const { removeTeam } = require("./db");
  require("console.table");
 
  init();
@@ -74,7 +72,7 @@ const { removeTeam } = require("./db");
 
  async function viewCharacters(){
      const characters = await db.findAllCharacters();
-     console.table(marvel);
+     console.table(characters);
      loadMainPrompts();
  };
  async function addCharacter(){
@@ -133,7 +131,8 @@ const { removeTeam } = require("./db");
      console.log(`Added ${team.name} to the database`);
      loadMainPrompts();
 
- }
+ };
+
  async function removeTeam(){
      const teams = await db.findAllTeams();
 
