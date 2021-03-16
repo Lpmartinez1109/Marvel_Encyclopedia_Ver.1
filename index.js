@@ -134,6 +134,25 @@ const { removeTeam } = require("./db");
      loadMainPrompts();
 
  }
+ async function removeTeam(){
+     const teams = await db.findAllTeams();
+
+     const teamChoices = teams.map(({id, name}) =>({
+         name: name,
+         value: id
+     }));
+
+     const {teamID} = await prompt({
+         type: "list",
+         name: "teamID",
+         message: "Which team would you like to remove? (WARNING: this will also remove any and all associated characters)",
+         choices: teamChoices
+     });
+     await db.removeTeam(teamID);
+     console.log(`Removed team from database`);
+
+     loadMainPrompts();
+ }
 
  function quit(){
      console.log("Goodbye for now!");
