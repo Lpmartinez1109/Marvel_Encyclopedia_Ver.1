@@ -119,6 +119,13 @@
      loadMainPrompts();
  }
 
+ async function viewTeam(){
+     const teams = await db.findAllTeams();
+     console.log("\n");
+     console.table(teams)
+     loadMainPrompts();
+ }
+
  async function addTeam(){
      const team = await prompt([
         { 
